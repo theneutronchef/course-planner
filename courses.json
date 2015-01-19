@@ -1,0 +1,20 @@
+{
+  "Prerequisites" : {
+  	"CogSci 1": false,
+  	"Math 1A/Math 16A": false,
+  	"CS 61A/E 7": false,
+  	"MCB 61/MCB 64": false,
+  	"Math 55/CS 70": false
+  	},
+  "Upper Div Requirements": {
+  	"Cognitive Neuroscience": false,
+  	"Cognitive Psychology": false,
+  	"Computational Modeling": false,
+  	"Linguistics": false,
+  	"Philosophy": false,
+  	"Society, Culture, and Cognition": false
+  },
+  "Upper Division Units": 0,
+  "Upper Division Classes": 0
+}
+ 
