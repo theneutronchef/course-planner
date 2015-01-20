@@ -2,7 +2,10 @@ import json
 
 courses_taken = []
 json_file = open('courses.json', 'r')
+course_data_file = open('course_data.json', 'r')
+
 data = json.load(json_file)
+course_data = json.load(course_data_file)
 
 def add(course):
 	courses_taken.append(course)
