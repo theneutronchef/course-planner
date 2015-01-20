@@ -7,8 +7,8 @@ course_data_file = open('course_data.json', 'r')
 data = json.load(json_file)
 course_data = json.load(course_data_file)
 
-def add(major, course_number):
-	course = major + " " + course_number
+def add(course):
+	# course = major + " " + course_number
 	in_major = False
 	for courses in data["Prerequisites"]:
 		if course in courses.split('/'):
@@ -27,8 +27,19 @@ def add(major, course_number):
 
 
 def check():
-	# do something
-	print("")
+	for courses in data["Prerequisites"]:
+		if data["Prerequisites"][courses] == False:
+			return False
+	for requirement in data["Upper Div Requirements"]:
+		if data["Upper Div Requirements"][requirement] == False:
+			return False
+	if data["Upper Division Units"] < 30 or data["Upper Division Classes"] < 9:
+		return False
+	return True
+
+def pretty_print(l):
+	for elem in l:
+		print(elem)
 
 def run():
 	running = True
@@ -38,20 +49,28 @@ def run():
 			running = False
 		elif func == "help":
 			print("add 'Department' 'Course Number': add class and updates checklist")
-			print("check: print out list of classes taken")
+			print("check: print out list of requirements fulfilled")
+			print("classes: print out list of classes taken")
+			print("list 'Requirement': list classes that can fulfil the given requirement")
 			print("exit: leave the program")
 		elif func == "check":
 			print(json.dumps(data, sort_keys=True, indent=4, separators=(',', ': ')))
-		elif func == "list":
-			print(courses_taken)
+			if check():
+				print("You are done with all requirements!")
+			else:
+				print("You are not done with all requirements")
+		elif func == "classes":
+			pretty_print(courses_taken)
 		else:
-			func_split = func.split()
+			func_split = func.partition(" ")
 			if func_split[0] == "add":
-				if len(func_split) == 3:
-					add(func_split[1], func_split[2])
+				add(func_split[2])
+				# print("Please use the correct format: add 'Department' 'Course Number'")
+			elif func_split[0] == "list":
+				if func_split[2] in course_data:
+					pretty_print(course_data[func_split[2]])
 				else:
-					print("Please use the correct format: add 'Department' 'Course Number'")
-
+					print("Please use the correct format: list 'Requirement'")
 			else:
 				print("Invalid input")
 
