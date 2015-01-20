@@ -2,26 +2,34 @@
 	"Cognitive Neuroscience": [
         "Anthropology 107",
         "Psych 117",
-        "CogSci/Psych c127",
+        "CogSci c127", 
+        "Psych c127",
         "Psych 133"
     ],
   	"Cognitive Psychology": [
-	  	"CogSci c100 / Psych c 120", 
+	  	"CogSci c100", 
+	  	"Psych c120", 
 		"Psych 122", 
-		"CogSci/Psych c124", 
-		"CogSci/Psych c126", 
-		"CogSci c102 / Psych c129",
+		"CogSci c124",
+		"Psych c124", 
+		"CogSci c126", 
+		"Psych c126", 
+		"CogSci c102", 
+		"Psych c129",
 		"Psych 143",
 		"Psych 164" 
   	],
   	"Computational Modeling": [
-  		"CogSci c131 / Psych c123", 
+  		"CogSci c131", 
+  		"Psych c123", 
 		"CS 188"
   	],
   	"Linguistics": [
   		"Ling 100",
-		"CogSci c101 / Ling c105",
-		"CogSci/Ling c142"
+		"CogSci c101", 
+		"Ling c105",
+		"CogSci c142", 
+		"Ling c142"
   	],
   	"Philosophy": [
 	  	"Phil 132",
@@ -31,8 +39,12 @@
 		"Phil 122"
   	],
   	"Society, Culture, and Cognition": [
-  		"CogSci c103 / History c192 / Media Studies c104C /Information c103",
-		"CogSci/Ling c104",
+  		"CogSci c103", 
+  		"History c192", 
+  		"Media Studies c104C", 
+  		"Information c103",
+		"CogSci c104", 
+		"Ling c104",
 		"Anthropology 166",
 		"Economics 119",
 		"Education 140AC",
